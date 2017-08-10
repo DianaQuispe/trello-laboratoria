@@ -1,3 +1,55 @@
 * {
 	background-color: #b0e5ef;
+	margin: 0px auto;
 }
+
+body {
+	color: black;
+}
+
+
+#div {
+	border: 12px;
+	border-color: black;
+	margin: 12px;
+	background-color: rgba(180, 197, 234, 0.24);;
+	height: 80px;
+	width:  250px;
+
+}
+
+#primero {
+	background-position: center;
+	background-color: #1879be;
+	border-radius: 12px;
+	width: 450px;
+	height: 500px;
+}
+#sera {
+	background-color: rgba(31, 29, 208, 0.11);
+
+}
+#divi {
+	position: absolute;
+	top:120px;
+	left: 455px;
+}
+#texti {
+	position: absolute;
+	left: 455px;
+	top: 80px;
+}
+
+ button{
+        font-size:10px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:rgba(232, 232, 234, 0.71);
+        background: rgba(50, 76, 123, 0.32);
+        border:0px;
+        width:auto;
+        height:19px;
+        border-radius: 2px;
+        padding: 15px;
+        position: button;
+  }
