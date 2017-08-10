@@ -11,73 +11,96 @@ var nuevoInp = function() {
 
 }
 
-var nuevoBtn = function() {
+var guardar = function() {
 	var btn = document.createElement("button");
 	btn.innerHTML  += "Guardar" ;
-
-	btn.setAttribute("onclick", "listaBoton()")
+	btn.setAttribute("id", "btn");
+	btn.setAttribute("onclick", "listaBoton()");
+	var nuevaX = document.createElement("button");
+	nuevaX.innerHTML += "X";
+	nuevaX.setAttribute("id", "X")
 	document.getElementById("div").appendChild(btn);
+	document.getElementById("div").appendChild(nuevaX);
+
 
 } 
 
 var botonLi = document.getElementById('botonLi');
 botonLi.onclick = function() {
+	var botonLi = document.getElementById('botonLi');
+	botonLi.style.display = "none";
+	var sipi = document.getElementById("sipi");
+	sipi.setAttribute("class", "sipi")
+	var botonLi = document.getElementById('botonLi');
+	var div = document.getElementById("div");
+	div.setAttribute("class", "div")
 	nuevoInp();
-	nuevoBtn();
+	guardar();
+	var btn = document.getElementById("btn");
+
+	document.getElementById("div").appendChild(btn);
+
 }
 
 //FUNCIONES
 function myFunction() {
 	nuevoInp();
-	nuevoBtn();
+	guardar();
 }
 
 function listaBoton() {
-	inpV = document.getElementById('inpCr').value;
+	var cont = document.getElementById('cont').value;
 	array = [];
-	array.push(inpV);
+	array.push(cont);
 	sale();
-	botones()
+	// botones();
 }
 
 
 function sale() {
+	// var sipi = document.getElementById('inpCr').value;
 	for(var i =0; i <array.length; i++) {
-		var p = document.getElementById("sera");
-		p.style.fontWeight= "bold";
-		p.style.height = '130px';
-		p.innerHTML +=  array[i] +"<br>";
+		var crear = document.createElement("input");
+		var añadirT = document.createElement("button");
+		añadirT.innerHTML += "Añadir nueva tarjeta";
+		añadirT.setAttribute("class", "inP");
+		cont.appendChild(añadirT);
+		cont.appendChild(crear);
+		document.getElementById('inpCr').value.style.fontWeight= "bold";
+		sipi.style.height = 'auto';
+		sipi.innerHTML +=  array[i] +"<br>";
+		cont.appendChild(sipi);
 	}
 }
 
 function botones() { 
-	var p = document.getElementById("sera");
-	var divi = document.createElement("div");
-	divi.setAttribute("id", "divi");
+	var sera = document.getElementById("todo");
+	var botones = document.getElementById("botones");
+	botones.setAttribute("id", "botones");
 	var botones = document.getElementById("botones");
 	var contbtn1 = document.createTextNode("Agregar nueva tarjeta");	
-	var contbtn2 = document.createTextNode("Guardar");		
 	var bt1 = document.createElement("button");
 	bt1.appendChild(contbtn1);
 	bt1.setAttribute("onclick", "presionBoton1()")
 	var bt2 = document.createElement("button");
-	bt2.appendChild(contbtn2);
+	var contbtn2 = document.createTextNode("Añadir");		
 	bt2.setAttribute("onclick", "presionBoton2()")
-	divi.appendChild(bt1);
-	divi.appendChild(bt2);
-	p.appendChild(divi);
+	bt2.appendChild(contbtn2);
+	botones.appendChild(bt1);
+	botones.appendChild(bt2);
+	sera.appendChild(botones);
 }
 
 function presionBoton1() {
-	var p = document.getElementById("sera");	
+	var sera = document.getElementById("sera");	
 	var textT = document.createElement("textarea");
 	textT.setAttribute("id", "texti");
-	p.appendChild(textT);
+	sera.appendChild(textT);
 
 }
 function presionBoton2() {
 	var texti  = document.getElementById("texti").value;
-	var p = document.getElementById("sera");
-	p.innerHTML += "<i>" + texti +"</i>" + "<br>" ;
+	var sera = document.getElementById("sera");
+	sera.innerHTML += "<i>" + texti +"</i>" + "<br>" ;
 	console.log(texti); 
 }
