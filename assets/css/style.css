@@ -2,6 +2,66 @@
 	background-color: #1879be;
 	margin: 0px auto;
 }
+#trello {
+	font-weight: bold;
+	font-size: 2em;
+	margin-bottom: 5% ;
+
+	color: white;
+	background-color: rgba(13, 97, 147, 0.78)
+} 
+#span {
+	background-color: rgba(29, 81, 118, 0.29);
+	padding: 1%;
+	height: 1%;
+	width: 15%; 
+	border: 15%;
+	border-radius :7px;
+	margin-left: 1%;
+	cursor:pointer;
+	cursor: hand;
+	color: rgba(255, 255, 255, 0.61);
+	
+}
+/*.span {
+	background-color: #eff3ef;
+}
+.nuevosDiv {
+	background-size: 80%;
+	background-color: black;
+}*/ 
+.oculto { 
+display: none;
+}
+.contenedor {
+	background-color: rgb(252, 255, 252);
+	border-radius :7px;
+	height: 80px;
+	width: 300px;
+	float: left;
+	display: inline-block;
+}
+.nuevoB {
+	width: 50%;
+	height: 50%;
+	background-color: white;
+
+
+}
+button{
+        font-size:15px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        background: rgba(50, 76, 123, 0.32);
+        border:0px;
+        width:auto;
+        height:auto;
+    	border-radius:5px;
+        padding: 15px;
+        position: button;
+		position: relative;
+  }
+/*
 #div {
 	border: 12px;
 	margin: 12px;
@@ -9,6 +69,8 @@
 	width:  250px;
 	position: relative;
 }
+
+
 
 .div {
 	background-color: rgba(255, 253, 253, 0.81);
@@ -68,19 +130,7 @@
 	background: #dbd9ed;
 }
 
- button{
-        font-size:15px;
-        font-family:Verdana,Helvetica;
-        font-weight:bold;
-        background: rgba(50, 76, 123, 0.32);
-        border:0px;
-        width:auto;
-        height:auto;
-    	border-radius:5px;
-        padding: 15px;
-        position: button;
-		position: relative;
-  }
+ 
 
 #botonLi {
 	width: 25%;
@@ -89,4 +139,3 @@
     color:rgba(232, 232, 234, 0.71);
 /*    display: inline-block;
 */
-}
